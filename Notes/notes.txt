@@ -1,0 +1,170 @@
+Data Structure and Algorithum
+
+Stack ==> import java.util.Stack;
+Stack<> stack = new Stack<>();
+stack have 4 methods (Last in First out)
+1. stack.push() //add to the top
+2. stack.pop()  // to remove from the top
+3. stack.peek()	 // to give top object not remove
+4. stack.search()  // search in stack
+
+
+Queue ===> import java.util.Queue; import java.util.LinledList;
+Queue<> queue = new LinkedList<>()
+First in first out / dequeue remove object at head / enqueue adding object at tail
+Queue is interface and extend the Collection there is 3 methods used in that 
+1. queue.offer()  // to add at end
+2. queue.poll()  // to remove from start
+3. queue.peek()  // gives last/taid object
+some inherestes methods
+1. queue.isEmpty()  // ture/false
+2. queue.size()  //size of queue
+3. queue.contains()  // present or not in queue T/F
+
+PriorityQueue ==> Queue<> queue = new PriorityQueue<>() //note (Collections.reversOrder())
+With the hight priorities first before element of lower priority
+while(!queue.isEmpty()){Sysout(queue.poll());}
+
+
+LInkedList  ===> Singly Linked List [data|address]-->[data|address]-->[data|Null]
+		 Doubly Linked List [null|data|address]-->[address|data|address]-->[address|data|null]
+inserstion and delection is easy // no random access //accessing and searching takes time
+LinkedList<> linkedList = new LinkedList<>();
+1. linkedList.push() // work as stack
+2. linkedList.pop()
+3. linkedList.offer()  // work as queue
+4. linkedList.poll()
+5. linkedList.add(location, value)
+6. linkedList.remove(value)
+7. linkedList.peekFirst()
+8. linkedList.peekLast()
+9. linkedList.addFirst()
+10. linkedList.addLast()
+11. linkedList.removeFirst()
+12. linkedList.removeLast()
+
+
+Dynamic Array === ArrayList
+creating own dynamic array
+import java.util.ArrayList;
+
+
+sum of n numbers 
+for(int i <= n)
+sum+=i  //run n times
+
+sum=n*(n+1)/2 //works same with only 3 steps
+
+
+
+Linear Search ==> Iterate through a collection one element at a time
+Disadvantage : - slow for large data sets
+Advantages :- fast for search of small to mediume data sets, does not need to sorted,
+useful for data structures that do not have randome access(LikedList)
+
+
+Binary Search ==> time consuming, 1st need to sort the array,start middel end 
+import java.util.Arrays;
+int index = Arrays.binaraySearch(array, value);
+
+
+Interpolation Search ==> improvement over binary search best used for uniformly distrubuted data
+"Guesses" where a value might be based on calculated probe results if probe is incorrect,
+search area is narrowed, and a new probe is calculated
+
+formula ==> probe = low + (high - low) * (value - array[low]) / (array[high] - array[low])
+
+used when data is uniform exp., 1,2,3,4,5,6
+
+
+Bubble Sort ===> pairs of adjacent element are compared, and the element swapped if they are not in order.
+
+Selection Sort ==> Search through an array and keep track of the minimum value during each iteration. at the end of each iteration, we swap variables.
+
+Insertion Sort ==> After comparing elements to the left shift elements to the right to make room to insert a value 
+fast then bubble sort and selection sort
+
+
+Recursion ===> a recursive method calls itself. 
+
+main(){
+ methode();
+}
+methode(i){
+ if(base condition) return 1;
+ result = result + methode(i - 1); 
+}
+
+
+
+Merge Sort ===> divied and concer
+recursively divide array in 2, sort, re-combine
+divied array in half part and last two elements compare with each others and
+swap the elements
+
+Quick Sort ==> moves smaller element to left of a pivot recursively divide array in 2 partition
+there is pivot at the end of array and j is start i is start-1
+if j is less than pivot value then increse i by 1 and swap the i and j
+for swap pivot value is equal and smaller 
+
+
+HashTable ===> key value pairs
+a data structure that stores unique keys to value ex.<Integer, String> each key/value pair is know as an
+entry. Fast insertion, look up, deletion of key/value pairs.
+not ideal for small data sets, great with large data sets
+
+Hashing ==> takes a key and computes an integer(formula will vary based on key & data type) In a hashtable, we
+use the hash % capacity to calculate an index number
+key.hashCode() % capacity = index
+
+Bucket ==> an indexed storege location for one or more Entries can store multiple entries in case of a collision
+(linked similarly a LinkedList)
+
+Collision ==> hash function generates the same index for more than one key less collisions = more efficiency
+
+
+Graph ====>
+
+undirected Graph===>
+
+Adjacency Matrix ==> An array to store 1's/0's to represent edges
+----> no of rows == no of unique nodes
+----> no of columns == no go unique nodes
+
+
+Adjacency List ==> An array/arrayList of LinkedList.
+each LinkedList has a unique node at the head.
+All adjacent neighbors to that node are added to that nodes LinkedList
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
